@@ -52,6 +52,8 @@ G(x, y) is the gradient magnitude at pixel (x, y).
 ## Performance Benchmarks
 
 The following results highlight the processing times for both CPU and GPU implementations:
+![image](https://github.com/user-attachments/assets/e4866069-e06f-40a5-adee-52a9e9119e14)
+
 
 ### Observations
 
@@ -77,26 +79,26 @@ pip install numba numpy opencv-python matplotlib pandas
 
 Ensure a CUDA-compatible GPU is available and CUDA drivers are installed.
 
-Running the Code
+### Running the Code
 
-Clone the repository:
+1. Clone the repository:
 
-git clone <repository-url>
-cd <repository-folder>
+  git clone <repository-url>
+  cd <repository-folder>
 
-Place an input image in the data folder and name it input_image.jpg.
+2. Place an input image in the data folder and name it input_image.jpg.
 
-Execute the script:
+  Execute the script:
 
-python main.py
+  python main.py
 
-Output
+### Output
 
 Processed images and the comparison plot (CPU_GPU_comparison.png) will be saved in the data folder.
 
 Performance metrics will be saved in a CSV file (performance_comparison_detailed.csv) in the same folder.
 
-Future Work
+## Future Work
 
 Extend the implementation to handle color images.
 
