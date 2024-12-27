@@ -1,6 +1,7 @@
 import sys
 import os
 import cv2 
+import matplotlib.pyplot as plt
 
 # Add the project root to the Python path
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -18,8 +19,9 @@ if __name__ == "__main__":
 
     hist_eq_img, edge_img_original, edge_img_hist_eq = process_images(input_img)
 
-    # Display the results (example using matplotlib)
-    import matplotlib.pyplot as plt
+    output_folder = os.path.join('data', 'output')
+    os.makedirs(output_folder, exist_ok=True)
+    
 
     plt.figure(figsize=(15, 10))
     # First row
@@ -37,4 +39,5 @@ if __name__ == "__main__":
     plt.title("Edge Detection on Equalized Image")
     plt.imshow(edge_img_hist_eq, cmap='gray')
     plt.tight_layout()
+    plt.savefig(os.path.join(output_folder, "GPU_image_processing.png"))
     plt.show()

@@ -83,7 +83,7 @@ def gpu_process(input_image):
 
 def main():
     input_image_path = os.path.join('data', 'input_image.jpg')
-    output_folder = 'data'
+    output_folder = os.path.join('data', 'output')
     os.makedirs(output_folder, exist_ok=True)
 
     input_image = cv2.imread(input_image_path, cv2.IMREAD_GRAYSCALE)
